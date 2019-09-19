@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<title>登录</title>
 </head>
-<body>
+{% load static %}
+<body style="background-image: url({% static 'img/back.jpeg' %});background-size:100% 150%;" >
 	<div style="margin: 15%40%;">
 		<h1>登录页面</h1>
 		<form action="/login/" method="post">

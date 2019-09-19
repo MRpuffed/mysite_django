@@ -7,4 +7,11 @@ class User(models.Model):
     max_length 参数限定长度
     unique  是否唯一
     """
-    name = models.CharField(max_length=128,unique=True)
+    u_name = models.CharField(max_length=128,unique=True)
+    u_password = models.CharField(max_length=128,default='')
+    u_last_time = models.CharField(max_length=128, default='')
+
+    def __unicode__(self):
+        return self.u_name
+    class Meta:
+        db_table = 'auto_user'      # 指定数据库表
